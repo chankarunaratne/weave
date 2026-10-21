@@ -8,7 +8,7 @@ The user is a designer. Backend choices are settled below. Do not reopen them.
 
 ## Status
 
-No app code yet. `skills/` is reserved and empty. Do not add skills until asked. When building starts, follow [PLAN.md](PLAN.md) in order. One git commit per step. Do not start the next step until the current one runs.
+Shell, pan, zoom, and the static sidebar are in. Follow [PLAN.md](PLAN.md) one chunk at a time. `skills/` stays empty until asked.
 
 ## The loop
 
@@ -129,13 +129,14 @@ Tool descriptions must tell the agent: when sending `html`, include all the CSS 
 
 ## Milestones
 
-The build is split into steps in [PLAN.md](PLAN.md). One git commit per step. A milestone is done when its last step runs. Do not start the next milestone until then.
+The build is split into chunks in [PLAN.md](PLAN.md). Finish the chunk that is in progress before starting the next one.
 
-1. **Shell and canvas.** Steps 1–4, including the static sidebar in step 1.5.
-2. **Selection and panel.** Steps 5–9.
-3. **Change list.** Steps 10–14.
-4. **MCP server.** Steps 15–18.
-5. **Docs.** Steps 19–20.
+1. **Shell, canvas, frames, drag.** Pan, zoom, frames in the main process, sample card through the HTML and CSS path.
+2. **Selection and hit testing.** Outline, breadcrumb, zoom tests, screenshots.
+3. **Properties panel.** Live reads and edits.
+4. **Change list.** Logic, panel, persistence, log.
+5. **MCP server.** All tools, plus a real client round trip.
+6. **Docs.** README and NOTES.md.
 
 ## Tests
 

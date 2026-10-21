@@ -1,5 +1,6 @@
 import { app, BrowserWindow, Menu } from 'electron'
 import path from 'path'
+import { attachFrameState } from './state.js'
 
 const rendererUrl = process.env.WEAVE_RENDERER_URL
 
@@ -19,6 +20,7 @@ function createWindow(): void {
     throw new Error('WEAVE_RENDERER_URL is not set')
   }
 
+  attachFrameState(window)
   void window.loadURL(rendererUrl)
 }
 

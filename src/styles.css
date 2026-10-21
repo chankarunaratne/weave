@@ -48,6 +48,43 @@ body {
   pointer-events: none;
 }
 
+.frame {
+  position: absolute;
+  pointer-events: none;
+}
+
+.frame-title {
+  position: absolute;
+  top: -22px;
+  left: 0;
+  height: 20px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 11px;
+  line-height: 20px;
+  white-space: nowrap;
+  cursor: grab;
+  pointer-events: auto;
+}
+
+.frame-title:active {
+  cursor: grabbing;
+}
+
+.frame iframe {
+  display: block;
+  border: 0;
+  background: transparent;
+  pointer-events: auto;
+}
+
+.selection-box {
+  position: absolute;
+  z-index: 2;
+  box-sizing: border-box;
+  border: 1.5px solid #0d99ff;
+  pointer-events: none;
+}
+
 .zoom {
   position: absolute;
   left: 12px;

@@ -1,17 +1,35 @@
 import type { ReactNode } from 'react'
 
-export function PropertiesPanel() {
+export function PropertiesPanel({
+  crumbs,
+  onCrumb,
+}: {
+  crumbs: { label: string }[]
+  onCrumb: (index: number) => void
+}) {
+  const current = crumbs[crumbs.length - 1]
   return (
     <aside className="panel" aria-label="Properties">
       <header className="panel-head">
-        <p className="crumb">
-          <span>PricingCard</span>
-          <span className="crumb-sep" aria-hidden="true">
-            /
-          </span>
-          <span>h2</span>
-        </p>
-        <h1 className="panel-title">Heading</h1>
+        {crumbs.length === 0 ? (
+          <p className="crumb">Nothing selected</p>
+        ) : (
+          <p className="crumb">
+            {crumbs.map((crumb, index) => (
+              <span className="crumb-item" key={`${crumb.label}-${index}`}>
+                {index > 0 ? (
+                  <span className="crumb-sep" aria-hidden="true">
+                    /
+                  </span>
+                ) : null}
+                <button type="button" className="crumb-btn" onClick={() => onCrumb(index)}>
+                  {crumb.label}
+                </button>
+              </span>
+            ))}
+          </p>
+        )}
+        <h1 className="panel-title">{current ? current.label : 'Properties'}</h1>
       </header>
 
       <div className="panel-scroll">
