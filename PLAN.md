@@ -162,6 +162,20 @@ What is done, what is broken, what was skipped, and what was not verified. Only 
 
 **Done when:** `NOTES.md` matches the last run, including anything from steps 1–19 that could not be verified.
 
+## Who checks what
+
+This repo is built and checked on Linux, with a display. Automated tests, `npm start`, clicking through the window, and reading a screenshot of that Linux window all happen here.
+
+These need a pass on your Mac. A bot on that machine can do them. This environment cannot.
+
+- **The Cursor loop.** The MCP server binds to `127.0.0.1` inside the machine where Weave is running. Cursor on your Mac has to talk to Weave on that same Mac. Ask it to import a real component, then to apply the changes.
+- **A real component, pixel for pixel.** The sample card can be checked here. Your app’s fonts, images, and CSS render on your machine. Linux will not match Mac type rendering.
+- **Trackpad feel.** Pinch zoom, two-finger pan, and cmd+scroll. Wheel events can be simulated here. A trackpad cannot.
+- **A retina screen.** The selection outline and `get_screenshot` at a device pixel ratio of 2. Zoom math is tested here at 50%, 100%, and 200%. A real retina display is not.
+- **Whether it feels like Figma.** The controls have to work here. Spacing, type, and whether the panel feels right are a designer’s call on your screen.
+
+Screenshots of the Linux build are available from here. A screenshot of Weave on your Mac is not.
+
 ## Acceptance, after step 18
 
 With the app running:
