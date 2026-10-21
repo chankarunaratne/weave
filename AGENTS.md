@@ -8,7 +8,7 @@ The user is a designer. Backend choices are settled below. Do not reopen them.
 
 ## Status
 
-Folder structure only. No app code yet. `skills/` is reserved and empty. Do not add skills until asked. When building starts, follow the milestones in order.
+No app code yet. `skills/` is reserved and empty. Do not add skills until asked. When building starts, follow [PLAN.md](PLAN.md) in order. One git commit per step. Do not start the next step until the current one runs.
 
 ## The loop
 
@@ -129,13 +129,13 @@ Tool descriptions must tell the agent: when sending `html`, include all the CSS 
 
 ## Milestones
 
-One git commit per milestone. Do not start the next until the current one runs.
+The build is split into steps in [PLAN.md](PLAN.md). One git commit per step. A milestone is done when its last step runs. Do not start the next milestone until then.
 
-1. **Shell and canvas.** Electron window, infinite canvas with pan/zoom, draggable frames, `add_frame` stubbed with hard-coded sample HTML.
-2. **Selection and panel.** Click-to-select inside iframes with a highlight overlay, breadcrumb, right panel with the controls above, live edits, correct behavior at all zoom levels.
-3. **Change list.** Record edits, collapse and drop no-ops, persist to JSON, show the quiet change log.
-4. **MCP server.** All tools above, working against the real canvas state.
-5. **Docs.** README with install steps and exactly how to add Weave to Cursor's MCP config. `NOTES.md` listing what is done, what is broken, what was skipped, and what was not verified.
+1. **Shell and canvas.** Steps 1–4.
+2. **Selection and panel.** Steps 5–9.
+3. **Change list.** Steps 10–14.
+4. **MCP server.** Steps 15–18.
+5. **Docs.** Steps 19–20.
 
 ## Tests
 
