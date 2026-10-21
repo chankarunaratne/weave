@@ -131,7 +131,7 @@ Tool descriptions must tell the agent: when sending `html`, include all the CSS 
 
 The build is split into steps in [PLAN.md](PLAN.md). One git commit per step. A milestone is done when its last step runs. Do not start the next milestone until then.
 
-1. **Shell and canvas.** Steps 1–4.
+1. **Shell and canvas.** Steps 1–4, including the static sidebar in step 1.5.
 2. **Selection and panel.** Steps 5–9.
 3. **Change list.** Steps 10–14.
 4. **MCP server.** Steps 15–18.
