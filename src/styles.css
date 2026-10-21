@@ -1,0 +1,42 @@
+html,
+body,
+#root {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, sans-serif;
+  background: #2c2c2c;
+  color: #ffffff;
+}
+
+.app {
+  display: flex;
+  height: 100%;
+  background: #2c2c2c;
+}
+
+.canvas {
+  position: relative;
+  flex: 1;
+  background: #1e1e1e;
+}
+
+.zoom {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  margin: 0;
+  font-size: 11px;
+  line-height: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  user-select: none;
+}
+
+.panel {
+  width: 240px;
+  flex: 0 0 240px;
+  background: #2c2c2c;
+  border-left: 1px solid #3a3a3a;
+}
