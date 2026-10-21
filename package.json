@@ -4,7 +4,8 @@
   "version": "0.0.0",
   "main": "dist/electron/main.js",
   "scripts": {
-    "start": "node scripts/start.mjs"
+    "start": "node scripts/start.mjs",
+    "test": "vitest run"
   },
   "dependencies": {
     "react": "^19.3.1",
@@ -17,6 +18,7 @@
     "@vitejs/plugin-react": "^6.1.2",
     "electron": "^44.9.2",
     "typescript": "^7.0.2",
-    "vite": "^8.3.4"
+    "vite": "^8.3.4",
+    "vitest": "^5.0.5"
   }
 }
