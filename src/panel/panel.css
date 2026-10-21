@@ -26,8 +26,26 @@
   color: var(--muted);
 }
 
+.crumb-item {
+  display: inline-flex;
+  gap: 6px;
+}
+
 .crumb-sep {
   color: rgba(255, 255, 255, 0.28);
+}
+
+.crumb-btn {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.crumb-item:last-child .crumb-btn {
+  color: #ffffff;
 }
 
 .panel-title {
