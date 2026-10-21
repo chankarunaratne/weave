@@ -18,6 +18,14 @@ The window is the Weave chrome only: a neutral canvas, an empty right-hand panel
 
 **Done when:** `npm start` opens that window on Linux, and the process quits cleanly when the window closes.
 
+### 1.5 Sidebar chrome
+
+The right panel is the dark properties inspector, before it does anything. Breadcrumb at the top. Sections for layout, text, fill, stroke, and effects, with sample values in the fields. Fixed, Hug, and Fill are visible. Padding and margin have a link control. Radius has one value plus the four corners.
+
+Nothing in the panel changes the canvas. No pan, no frames, no selection.
+
+**Done when:** `npm start` shows that sidebar beside the empty canvas.
+
 ### 2. Pan and zoom
 
 The canvas pans with space+drag and with trackpad scroll. It zooms with pinch and with cmd+scroll (ctrl+scroll on Linux). The zoom label updates. The world is a div moved with CSS transforms. No canvas library.
@@ -56,7 +64,7 @@ Test the overlay math (zoom, pan, iframe offset) at those three zooms.
 
 ### 6. The panel reads the selection
 
-The right panel fills from computed styles when something is selected, and hides when nothing is. Sections are there, read-only: layout, text, fill, stroke, effects. Values are the real computed ones (px, hex).
+The sidebar from step 1.5 fills from computed styles when something is selected, and hides when nothing is. Values are the real computed ones (px, hex). The fields stay read-only.
 
 **Done when:** selecting the sample heading shows its real font size, weight, and color, and clicking the canvas background clears the panel.
 
